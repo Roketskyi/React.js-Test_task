@@ -4,6 +4,8 @@
     font-family: Montserrat;
 }
 
+
+
 .container {
     display: flex;
     justify-content: space-between;
@@ -26,7 +28,14 @@
 .card {
     margin: 0 0 0 96px;
     border-radius: 30px;
-    background-color: rgba(33, 98, 100, 0.8);
+    /* background-color: rgba(255, 16, 16, 0.1); */
+
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('../images/card.png');
+    background-size: cover;
+
+    background-position: center;
+    height: 100vh;
+
     width: fit-content;
     height: fit-content;
     padding: 15px 40px 250px 40px;
