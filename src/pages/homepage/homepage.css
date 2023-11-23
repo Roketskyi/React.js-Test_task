@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.image-container {
+    position: absolute;
+    display: hidden;
+    top: 0;
+    right: 0;
+}
+
+.right-preview {
+    width: 732px;
+    height: 734px;
+    flex-shrink: 0;
+}
+
+.card {
+    margin: 0 0 0 96px;
+    border-radius: 30px;
+    background-color: rgba(33, 98, 100, 0.8);
+    width: fit-content;
+    height: fit-content;
+    padding: 15px 40px 250px 40px;
+    position: relative;
+}
+
+.title-card {
+    color: rgba(255, 255, 255, 0.80);
+    text-align: center;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.buttom-in-box {
+    color: yellow;
+    background-color: #ffffff00;
+    border: 2px solid #FFD700;
+    border-radius: 8px;
+    font-size: 24px;
+    padding: 0 24px;
+
+    cursor: pointer;
+}
+
+.input-in-box {
+    background: rgba(255, 255, 255, 0.60);
+    color: rgba(33, 33, 33, 0.70);
+    font-size: 18px;
+    border: 0;
+    border-radius: 3px;
+    padding: 6px;
+    margin-right: 12px;
+
+    text-align: center;
+}
+
+.send-data-box {
+    display: flex;
+    align-items: center;
+    margin: 32px 0;
+}
+
+.div-new-item {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #FFD700;
+    position: relative;
+}
+
+.div-new-item svg {
+    position: absolute;
+    right: 0;
+
+    cursor: pointer;
+}
+
+.item-priority {
+    display: flex;
+    align-items: center;
+    
+    justify-content: center;
+    color: black;
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 3px;
+    background: var(--Gold, #FFD700);
+    font-weight: bold;
+
+    margin-left: 21px;
+}
+
+.item-priority p {
+    color: #000;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: default;
+}
+
+.item-title {
+    color: rgba(255, 255, 255, 0.90);
+
+    font-family: Calibri;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    margin-left: 21px;
+}
