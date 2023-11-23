@@ -1,10 +1,20 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: Montserrat;
+@media all and (min-width: 500px) {
+    .card {
+        margin: 0 0 0 96px;
+        padding: 15px 40px 250px 40px;
+    }
 }
 
+@media all and (max-width: 500px) {
+    .right-preview {
+        display: none;
+    }
 
+    .card {
+        text-align: center;
+        padding: 15px 4px 250px 4px;
+    }
+}
 
 .container {
     display: flex;
@@ -26,19 +36,15 @@
 }
 
 .card {
-    margin: 0 0 0 96px;
-    border-radius: 30px;
-    /* background-color: rgba(255, 16, 16, 0.1); */
+    border-radius: 30px;    
 
     background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url('../images/card.png');
     background-size: cover;
 
     background-position: center;
-    height: 100vh;
 
     width: fit-content;
     height: fit-content;
-    padding: 15px 40px 250px 40px;
     position: relative;
 }
 
