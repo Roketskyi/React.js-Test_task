@@ -13,6 +13,7 @@ const Homepage = () => {
         title: title,
         priority: priority,
       };
+
       setItems([...items, newItem]);
       setTitle('');
       setPriority('');
@@ -21,13 +22,23 @@ const Homepage = () => {
 
   const handleRemoveItem = (index) => {
     const updatedItems = [...items];
+    
     updatedItems.splice(index, 1);
+
     setItems(updatedItems);
   };
 
   const handleKeyDown = (e) => {
     if (e.key === 'Enter') {
       handleSendClick();
+    }
+  };
+
+  const handlePriorityChange = (e) => {
+    const value = e.target.value;
+
+    if (!isNaN(value) && value !== '' && value.length <= 2) {
+      setPriority(value);
     }
   };
 
@@ -53,7 +64,7 @@ const Homepage = () => {
             placeholder="14"
             value={priority}
             className='input-in-box'
-            onChange={(e) => setPriority(e.target.value)}
+            onChange={handlePriorityChange}
             onKeyDown={handleKeyDown}
           />
 
