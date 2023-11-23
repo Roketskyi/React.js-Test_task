@@ -1,11 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+
 import './homepage.css';
 import dotsImage from '../images/21077233-removebg-preview.png';
+
+const useLocalStorageList = (key, defaultValue) => {
+  const [state, setState] = useState(() => JSON.parse(localStorage.getItem(key)) || defaultValue);
+  useEffect(() => {
+    localStorage.setItem(key, JSON.stringify(state));
+  }, [key, state]);
+  return [state, setState];
+};
 
 const Homepage = () => {
   const [title, setTitle] = useState('');
   const [priority, setPriority] = useState('');
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useLocalStorageList('items', []);
 
   const handleSendClick = () => {
     if (title && priority) {
@@ -22,9 +31,7 @@ const Homepage = () => {
 
   const handleRemoveItem = (index) => {
     const updatedItems = [...items];
-    
     updatedItems.splice(index, 1);
-
     setItems(updatedItems);
   };
 
@@ -36,7 +43,6 @@ const Homepage = () => {
 
   const handlePriorityChange = (e) => {
     const value = e.target.value;
-
     if (!isNaN(value) && value !== '' && value.length <= 2) {
       setPriority(value);
     }
